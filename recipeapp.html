@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="recipeapp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>RECIPE APP</h1>
+            <form >
+                <input type="text" class="searchBox" placeholder="Search for recipes...">
+                <button class="searchBtn">Search</button>
+                <button class="favorite">Favorites</button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-popup" id="login-popup" style="display: none;">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button id="show-signup">Sign Up</button>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="signup-popup" id="signup-popup" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <button id="show-login">Login</button>
+    </div>
+
+    <main>
+        <section>
+            <div class="recipe-container">
+                <h2>Search your favorite recipe</h2>
+            </div>
+            <div class="recipe-details">
+                <button type="button" class="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="recipe-details-content">
+                </div>
+            </div>
+            <div class="spinner" style="display: none;"></div>
+        </section>
+    </main>
+
+    <!-- Favorite Recipes Popup -->
+    <div class="favorite-popup" style="display: none;">
+        <button type="button" class="favorite-popup-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="favorite-recipes-container"></div>
+    </div>
+
+
+    <script src="recipeapp.js"></script>
+</body>
+</html>
